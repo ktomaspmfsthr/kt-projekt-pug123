@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title PUG
+    link(rel='stylesheet', type='text/css', href='/css/style.css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300', rel='stylesheet', type='text/css')
+  body.view
+    fieldset
+      if weather
+        p= weather
+      if sunrise
+        p= sunrise
+      if sunset
+        p= sunset
+      if error
+        p= error
+      form(action='/', method='get')
+        input.ghost-button(type='submit', value='Nazad')
